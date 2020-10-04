@@ -1,0 +1,7 @@
+<h1>These are your friends page</h1>
+
+<% @users.each do |user| %>
+    <div class="user">
+        <h3><%= user.username %> </h3><p>This is the current post</p>
+    </div>
+<% end %>
