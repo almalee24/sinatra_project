@@ -1,12 +1,12 @@
 User.destroy_all
 Post.destroy_all
 
-User.create(name: Faker::Name.name, email: Faker::Internet.email, username: Faker::Internet.username(specifier: 5..8), bio: Faker::Quote.famous_last_words )
-User.create(name: Faker::Name.name, email: Faker::Internet.email, username: Faker::Internet.username(specifier: 5..8), bio: Faker::Quote.famous_last_words )
-User.create(name: Faker::Name.name, email: Faker::Internet.email, username: Faker::Internet.username(specifier: 5..8), bio: Faker::Quote.famous_last_words )
-User.create(name: Faker::Name.name, email: Faker::Internet.email, username: Faker::Internet.username(specifier: 5..8), bio: Faker::Quote.famous_last_words )
-User.create(name: Faker::Name.name, email: Faker::Internet.email, username: Faker::Internet.username(specifier: 5..8), bio: Faker::Quote.famous_last_words )
-User.create(name: Faker::Name.name, email: Faker::Internet.email, username: Faker::Internet.username(specifier: 5..8), bio: Faker::Quote.famous_last_words )
+User.create(name: Faker::Name.name, email: Faker::Internet.email, username: Faker::Internet.username(specifier: 5..8), bio: Faker::Quote.famous_last_words)
+User.create(name: Faker::Name.name, email: Faker::Internet.email, username: Faker::Internet.username(specifier: 5..8), bio: Faker::Quote.famous_last_words)
+User.create(name: Faker::Name.name, email: Faker::Internet.email, username: Faker::Internet.username(specifier: 5..8), bio: Faker::Quote.famous_last_words)
+User.create(name: Faker::Name.name, email: Faker::Internet.email, username: Faker::Internet.username(specifier: 5..8), bio: Faker::Quote.famous_last_words)
+User.create(name: Faker::Name.name, email: Faker::Internet.email, username: Faker::Internet.username(specifier: 5..8), bio: Faker::Quote.famous_last_words)
+User.create(name: Faker::Name.name, email: Faker::Internet.email, username: Faker::Internet.username(specifier: 5..8), bio: Faker::Quote.famous_last_words)
 
 
 

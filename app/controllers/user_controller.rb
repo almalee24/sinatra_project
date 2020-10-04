@@ -5,7 +5,6 @@ class UserController < ApplicationController
     end
 
     get "/users" do 
-        binding.pry
         @users = User.all
         @posts = Post.all
         erb :"users/index"
