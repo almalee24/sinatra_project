@@ -1,27 +1,160 @@
-@media screen {
+@media screen and (min-width: 736px) {
   /* --- Reset Styles --- */
   * {
     list-style: none;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
   }
 
   html, body {
     height: 100%;
-    width: 100%;
+    margin: 0, auto;
+    text-align: center;
   }
 
   .goalgram{
     font-family: 'Dancing Script', cursive;
   }
+
+  .goalgram a{
+    text-decoration: none;
+    color: black;
+  }
   /* --- Header for Pages --- */
   header {
-    color: #fff;
-    border: 1px solid #000;
+    background-color: #fff;
+    border-bottom: 1px solid #dbdbdb;
+    margin: 0px;
+    padding-top: 10px;
+    height: 70px;
+  }
+
+  header li{
+    display: inline-block;
+    margin-left: 40px;
   }
 
   .span-1-of-3 {
     width: 32.26%; 
+    float: left;
+  }
+
+  h5 .span-2-of-3 {
+    width: 66.13%;
+    font-size: 12px;
+  }
+
+  .col-header:first-child { 
+    margin-left: 0; 
+    display: inline-block;
+    float: left;
+  } 
+
+  .hlinks:link, .hlinks:visited{
+    text-decoration: none;
+    color: #000000;
+    border-bottom: 2px solid transparent;
+    display: block;
+  }
+
+  .dropbtn {
+    background: transparent;
+    border: 2px solid transparent;
+  }
+
+  .dropdown_content ion-icon{
+    font-size: 8px;
+  }
+
+  .dropdown-content{
+    display: none;
+    text-decoration: none;
+    position: absolute;
+    background-color: #fff;
+    z-index: 1;
+    border-radius: 3px;
+    text-align: left;
+  }
+
+  .dropdown-content a{
+    color: #000;
+    padding:  12px 16px;
+    display: block;
+    text-decoration: none;
+    display: inline-block;
+    min-width: 160px;
+  }
+
+  .dropdown:hover .dropdown-content {
+    padding: 5px;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #dbdbdb;
+  }
+
+  .dropbtn:hover {
+    border: 2px solid #000;
+    border-radius: 50%;
+    padding: 1px;
+  }
+
+
+  ion-icon {
+    font-size: 32px;
+  }
+  /* --- Search Box --- */
+.search {
+  width: 100%;
+  position: relative;
+  display: inline;
+  text-align: center;
+  padding: 7px;
+  border-radius: 3px;
+}
+
+
+/* -- Sign in/Log in --- */
+
+  .form_param {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 40vh;
+    border-radius: 3px;
+    border: 1px solid #000000;
+  }
+
+  .button {
+    background-color: #405DE6;
+    border: 2px solid transparent;
+    color: #fff;
+  }
+
+  h5 a {
+    text-decoration: none;
+    color: #405DE6;
+    
+  }
+/* --- NEW POSTS PAGE --- */ 
+h4 input {
+  background-color: transparent;
+  border: 1px solid transparent;
+  text-decoration: none;
+  color: #405DE6;
+}
+
+.newpost-box text-area{
+  width: 400px;
+}
+  
+/* --- HOME POSTS PAGE --- */ 
+
+  .home-box{
+    max-width: 645px;
+    width: 100% ;
+    height: 300px;
   }
 
 
@@ -33,31 +166,35 @@
     line-height: 18px;
   }
   .wrapper {
-    background: #fff;
-    -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
-    -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
-    box-shadow: 0 0 10px rgba(0,0,0,.3);
+    background: #ffffff;;
+    border: 1px solid #dbdbdb;
+    margin-top: 10px;
+    border-radius: 3px;
     margin: 16px auto;
     max-width: 960px;
     padding: 2.25%; /* 18px / 800px */
-    width: 85%;
+    width: fit-content;
+    text-align: center;
   }
 
   h1 {
-    font-size: 36px;
-    line-height: 54px;
+    font-size: 50px;
+    line-height: 90px;
   }
 
   h2 {
-    border-bottom: 2px solid #ccc;
-    font-size: 24px;
+    font-size: 30px;
     line-height: 36px;
-    margin-bottom: 16px;
   }
 
   h3 {
     font-size: 18px;
     line-height: 36px;
+  }
+
+  h4 {
+    font-size: 16px;
+    line-height:  36px;
   }
 
   p {
@@ -90,7 +227,6 @@
   }
 
   footer.branding {
-    border-top: 2px solid #ccc;
     margin-top: 20px;
     padding-top: 20px;
   }
@@ -125,4 +261,11 @@
     font-size: 18px;
     line-height: 24px;
   }
+}
+
+@media only screen and (max-width: 480px) {
+	.col header{ 
+		/*margin: 1% 0 1% 0%;*/
+        margin: 0;
+	}
 }

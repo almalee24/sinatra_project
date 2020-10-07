@@ -1,3 +1,30 @@
+<header>
+    <div class="col-header span-1-of-3">
+      <h2 class="goalgram"><a href="/posts">Goalgram</a></h2>
+    </div>
+    <div class="col-header span-1-of-3">
+      <div class="wrap">
+        <div class="search">
+          <input type="text" class="searchusername" placeholder="Search">
+          <button type="submit" class="searchbutton">
+            <i class="goalgram-search"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-header span-1-of-3">
+      <ul class="social-links">
+        <li><a class="hlinks" href="/posts"><ion-icon name="home"></ion-icon></a></li>
+        <li><a class="hlinks" href="/posts/new"><ion-icon name="add-circle-outline"></ion-icon></a></li>
+      </ul>
+      <% if logged_in? %>
+        <h4>Welcome <%= current_user.username %></h4>
+        <h4><a class="hlinks" href="/logout">Log Out</a></h4>
+      <% else %>
+        <h4><a class="hlinks" href="/login">Log In</a></h4>
+      <% end %>
+    </div>
+  </header>
 <h1>These are your friends page</h1>
 
 <% @users.each do |user| %>

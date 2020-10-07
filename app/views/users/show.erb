@@ -1,0 +1,20 @@
+
+<div>
+    <div>
+        <h2><%= current_user.username%></h2>
+        <div>
+            <button><a href="/users/<%=current_user.id%>/edit">Edit Profile</a></button>
+        </div>
+    </div>
+    <div>
+        <h3><%= current_user.name %></h3>
+       <p><%= current_user.bio %></p>
+    </div>
+</div>
+<div>
+    <% Post.all.each do |post|%>
+        <% if post.user_id == current_user.id %>
+            <p><%= post.comments %></p>
+        <% end %>
+    <% end %>
+</div>

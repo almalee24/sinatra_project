@@ -1,35 +1,37 @@
+require 'pry'
 class PostController < ApplicationController
     get "/posts" do 
-        if logged_in?
-            binding.pry
-            @posts = Post.all
-            erb :"posts/index"
-        else 
-            redirect '/login'
-        end
-    
+        binding.pry
+        redirect_if_not_logged_in
+        @posts = Post.all
+        erb :"posts/index"
     end
 
     get '/posts/new' do 
+        redirect_if_not_logged_in
         @users = User.all
         erb :"posts/new"
     end
 
     get '/posts/:id' do
+        binding.pry
+        redirect_if_not_logged_in
         @post = Post.find_by_id(params[:id])
         erb :"posts/show"
     end
 
     post '/posts' do
+        binding.pry
         post = Post.new(params)
         if post.save
-            redirect "/posts/#{post.id}"
+            redirect "/posts"
         else
             redirect "posts/new"
         end
     end
 
     get '/posts/:id/edit' do
+        redirect_if_not_logged_in
         @users = User.all
         @post = Post.find_by_id(params[:id])
         if @post.user.id == current_user.id 

@@ -1,9 +1,13 @@
-<%= @post.comments %><br>
+
+<%= @post.body %><br>
 <a href="/posts/<%= @post.id %>/edit">Edit this posts</a>
 <a href="/posts">Back to the index</a>
 
-<h3>Would you like to delete this posts?</h3>
-<form method="POST" action="/posts/<%= @post.id %>">
-    <input type="hidden" id="hidden" name="_method" value="DELETE">
-    <input type="submit" value="delete">
-</form>
+
+<% if @post.id == current_user.id %>
+    <h3>Would you like to delete this posts?</h3>
+    <form method="POST" action="/posts/<%= @post.id %>">
+        <input type="hidden" id="hidden" name="_method" value="DELETE">
+        <input type="submit" value="delete">
+    </form>
+<% end %>

@@ -1,7 +1,17 @@
+
 <% @posts.each do |post|%>
-    <div class="post-box span-1-of-3">
-        <h4>
-            <%= post.comments %>
-        </h4>
-    </div>
+        <div class="home-box">
+            <% User.all.each do |user| %>
+                <% if user.id == post.user_id%>
+                    <%= user.username %>
+                <% end %>
+            <% end %>
+            <h4><%= post.comments %></h4>
+            <% User.all.each do |user| %>
+                <% if user.id == post.user_id%>
+                    <%= user.username %>
+                <% end %>
+            <% end %>
+        </div>
+    
 <% end %>

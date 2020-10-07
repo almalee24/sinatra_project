@@ -1,7 +1,11 @@
-<h1>Login here!</h1>
+<div class="sign_login">
+    <h1 class="goalgram">Goalgram</h1>
 
-<form method="POST" action="/login">
-    Email: <input type="text" name="email"><br />
-    Password: <input type="password" name="password"><br />
-    <input type="submit" value="login">
-</form>
+    <form method="POST" action="/login">
+        <input class="form_param" type="text" name="email" placeholder="Email"><br />
+        <input class="form_param" type="password" name="password" placeholder="Password"><br />
+        <input class="form_param button" type="submit" value="Log in">
+    </form>
+
+    <h5>Don't have an account?<a href="users/signup">Sign Up</a></h5>
+</div>

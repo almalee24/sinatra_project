@@ -1,0 +1,12 @@
+
+
+<h1>Edit your Profile!</h1>
+
+<form method="POST" action="/users/<%= current_user.id %>">
+    <input type="hidden" id="hidden" name="_method" value="PATCH">
+    Name: <input type="text" name="name"><br />
+    Username: <input type="text" name="username"><br />
+    Bio: <input type="text" name="bio"><br />
+    Email: <input type="text" name="email"><br />
+    <input type="submit">
+</form>
