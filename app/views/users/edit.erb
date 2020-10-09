@@ -1,12 +1,32 @@
 
 
-<h1>Edit your Profile!</h1>
+<h2>Edit Profile</h2>
 
 <form method="POST" action="/users/<%= current_user.id %>">
-    <input type="hidden" id="hidden" name="_method" value="PATCH">
-    Name: <input type="text" name="name"><br />
-    Username: <input type="text" name="username"><br />
-    Bio: <input type="text" name="bio"><br />
-    Email: <input type="text" name="email"><br />
+<input type="hidden" id="hidden" name="_method" value="PATCH">
+    <div class="profile-boxes">
+        <h3>Name</h3>
+        <div>
+            <input type="text" name="name" placeholder=<%= current_user.name %>><br />
+        </div>
+    </div>
+    <div class="profile-boxes">
+        <h3>Username</h3>
+        <div>
+            <input type="text" name="username" placeholder=<%= current_user.username %>><br />
+        </div>
+    </div>
+    <div class="profile-boxes">
+        <h3>Bio</h3>
+        <div>
+            <input type="text" name="bio" placeholder=<%= current_user.bio %>><br />
+        </div>
+    </div>
+    <div class="profile-boxes">
+        <h3>Email</h3>
+        <div>
+            <input type="text" name="email" placeholder=<%= current_user.email %>><br />
+        </div>
+    </div>
     <input type="submit">
 </form>

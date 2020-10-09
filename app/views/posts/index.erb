@@ -6,7 +6,7 @@
                     <%= user.username %>
                 <% end %>
             <% end %>
-            <h4><%= post.comments %></h4>
+            <h4><%= post.body%></h4>
             <% User.all.each do |user| %>
                 <% if user.id == post.user_id%>
                     <%= user.username %>

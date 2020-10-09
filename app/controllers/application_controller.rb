@@ -7,7 +7,8 @@ class ApplicationController < Sinatra::Base
     set :views, 'app/views'
     enable :sessions
     set :sessions, true
-    set :session_secret, "thisisthefastway"
+    set :session_secret, ENV["SECRET"]
+   register Sinatra::Flash
   end
 
   get "/" do
@@ -21,7 +22,6 @@ class ApplicationController < Sinatra::Base
     end
 
     def current_user
-      binding.pry
       @user ||= User.find_by(id: session[:user_id])
     end
 
