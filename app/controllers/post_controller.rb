@@ -14,14 +14,12 @@ class PostController < ApplicationController
     end
 
     get '/posts/:id' do
-        binding.pry
         redirect_if_not_logged_in
         @post = Post.find_by_id(params[:id])
         erb :"posts/show"
     end
 
     post '/posts' do
-        binding.pry
         post = Post.new(params)
         if post.save
             redirect "/posts"

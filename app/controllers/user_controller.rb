@@ -1,22 +1,4 @@
 class UserController < ApplicationController
-
-    # get "/" do
-    #     erb :welcome
-    # end
-
-    # get "/users" do 
-    #     binding.pry
-    #     @users = User.all_except(current_user)
-    #     @posts = Post.all
-    #     erb :"users/index"
-    # end
-
-    # get '/users/:id' do 
-    #     binding.pry
-    #     @user = User.find_by(params[:id])
-    
-    #     erb :"users/show"
-    # end
     get '/users' do 
         erb :"users/show"
     end

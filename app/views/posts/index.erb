@@ -1,17 +1,25 @@
 
 <% @posts.each do |post|%>
-        <div class="home-box">
-            <% User.all.each do |user| %>
-                <% if user.id == post.user_id%>
-                    <%= user.username %>
+    <div class="home-post-box">
+            <div>
+                <% User.all.each do |user| %>
+                    <% if user.id == post.user_id%>
+                        <img src=<%=user.image%> alt="Profile Picture" width="32" height="32">
+                        <%= user.username %>
+                    <% end %>
                 <% end %>
-            <% end %>
-            <h4><%= post.body%></h4>
-            <% User.all.each do |user| %>
-                <% if user.id == post.user_id%>
-                    <%= user.username %>
+            </div>
+            <div>
+                <img src=<%=post.images%> alt="Post Picture" height="641" width="641">
+            </div>
+            <div>
+                <% User.all.each do |user| %>
+                    <% if user.id == post.user_id%>
+                        <%= user.username %>
+                        <h4><%= post.body%></h4>
+                    <% end %>
                 <% end %>
-            <% end %>
-        </div>
-    
+            </div>
+
+    </div>
 <% end %>

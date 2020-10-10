@@ -14,6 +14,7 @@ gem 'tux'
 gem 'faker'
 gem 'sinatra-flash'
 gem 'env'
+gem 'sinatra-partial', '~> 1.0', '>= 1.0.1'
 
 group :test do
   gem 'rspec'

@@ -36,7 +36,7 @@
           <li><a class="hlinks" href="/posts"><ion-icon name="home"></ion-icon></a></li>
           <li><a class="hlinks" href="/posts/new"><ion-icon name="add-circle-outline"></ion-icon></a></li>
           <li class="dropdown">
-            <button class="dropbtn"><ion-icon name="person-outline"></ion-icon></button>
+           `<button class="dropbtn"><img src=<%=current_user.image%> alt="Profile Picture" width="32" height="32"></button>
             <div class="dropdown-content">
               <a href="/users">
                 <ion-icon class="span-1-of-3" name="person-circle-outline"></ion-icon>
@@ -53,9 +53,9 @@
       </div>
     </header>
     <div class="wrapper">
-
+  
         <%= yield %>
-
+    
       <footer class="branding">
         <small>&copy; 2020 <strong>Alma Flores </strong></small>
       </footer>
