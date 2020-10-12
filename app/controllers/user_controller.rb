@@ -8,7 +8,6 @@ class UserController < ApplicationController
     end
 
     post '/users' do 
-        binding.pry
         @user = User.new(params)
 
         if @user && @user.save 

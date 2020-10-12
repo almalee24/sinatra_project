@@ -10,15 +10,15 @@
                 <% end %>
             </div>
             <div>
-                <img src=<%=post.images%> alt="Post Picture" height="641" width="641">
+                <img class="image-post" src=<%=post.images%> alt="Post Picture" height="641" width="641">
             </div>
             <div>
                 <% User.all.each do |user| %>
                     <% if user.id == post.user_id%>
                         <%= user.username %>
-                        <h4><%= post.body%></h4>
                     <% end %>
                 <% end %>
+                <h4><%= post.body%></h4>
             </div>
 
     </div>

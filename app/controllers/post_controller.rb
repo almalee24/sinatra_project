@@ -20,9 +20,9 @@ class PostController < ApplicationController
     end
 
     post '/posts' do
-        post = Post.new(params)
+        post = current_user.posts.build(params)
         if post.save
-            redirect "/posts"
+            redirect "/users"
         else
             redirect "posts/new"
         end

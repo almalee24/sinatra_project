@@ -95,10 +95,14 @@
     background-color: #dbdbdb;
   }
 
-  .dropbtn:hover {
+  .profile-pic:hover {
     border: 2px solid #000;
     border-radius: 50%;
     padding: 1px;
+  }
+
+  .profile-pic{
+    border-radius: 50%;
   }
 
 
@@ -159,11 +163,24 @@ h4 input {
   }
 
   .home-post-box{
-    position: relative;
-    padding-bottom: 5600px;
-    padding-top: 0px;
-    flex-direction: column;
+    background: #ffffff;;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    margin: 16px auto;
+    max-width: 641px;
+    padding: 2.25%; /* 18px / 800px */
+    width: fit-content;
+    text-align: center;
   }
+
+  .image-post{
+    margin: 16px auto;
+  }
+
+  .profile-post{
+    width: 500px;
+  }
+
 
 
   /* --- Welcome Page Styles --- */
@@ -173,7 +190,7 @@ h4 input {
     font-family: Sans-Serif;
     line-height: 18px;
   }
-  .wrapper {
+  /* .wrapper {
     background: #ffffff;;
     border: 1px solid #dbdbdb;
     margin-top: 10px;
@@ -183,7 +200,7 @@ h4 input {
     padding: 2.25%; /* 18px / 800px */
     width: fit-content;
     text-align: center;
-  }
+  } */
 
   /* --- Profile --- */
   .profile-boxes {

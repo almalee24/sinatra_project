@@ -7,7 +7,7 @@
         </div>
     </div>
     <div>
-        <img src=<%=current_user.image%> alt="Profile Picture" width="164" height="164">
+        <img class="profile-pic" src=<%=current_user.image%> alt="Profile Picture" width="164" height="164">
         <h3><%= current_user.name %></h3>
        <p><%= current_user.bio %></p>
     </div>
@@ -15,7 +15,21 @@
 <div>
     <% Post.all.each do |post|%>
         <% if post.user_id == current_user.id %>
-            <p><%= post.body %></p>
+            <div class="profile-post">
+                <div>
+                    <h5><%= current_user.username%></h5>
+                     <li class="dropdown">
+           `            <button class="dropbtn">...</button>
+                            <div class="dropdown-content">
+                            <h5><a href="/posts/<%=post.id%>/edit">Edit Post</a></h5>
+                            <h5><a class="hlinks" href="/logout">Log Out</a></h5>
+                     </li>
+                </div>
+                <div>
+                    <img src="/Users/Alma/Desktop/uploads/"+<%=post.images%> alt="Post Image" width="293" height="293">
+                </div>
+                <p><%= post.body %></p>
+            </div>
         <% end %>
     <% end %>
 </div>
