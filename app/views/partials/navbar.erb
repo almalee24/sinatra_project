@@ -1,0 +1,35 @@
+<header>
+      <div class="col-header span-1-of-3">
+        <h2 class="goalgram"><a href="/posts">Goalgram</a></h2>
+      </div>
+     <div class="col-header span-1-of-3">
+        <div class="wrap">
+         <form class="search" method="POST" action="/allusers">
+            <input type="name" name="name" class="searchusername" placeholder="Search">
+            <input type="submit" class="searchbutton">
+             <i class="goalgram-search"></i>
+            </input>
+          </form>
+        </div>
+      </div>
+      <div class="col-header span-1-of-3">
+        <ul class="social-links">
+          <li><a class="hlinks" href="/posts"><ion-icon name="home"></ion-icon></a></li>
+          <li><a class="hlinks" href="/posts/new"><ion-icon name="add-circle-outline"></ion-icon></a></li>
+          <li class="dropdown">
+            <button class="dropbtn"><img class="profile-pic" src=<%=current_user.image%> alt="Profile Picture" width="32" height="32"></button>
+            <div class="dropdown-content">
+              <a href="/users">
+                <ion-icon class="span-1-of-3" name="person-circle-outline"></ion-icon>
+                <h5 class="span-2-of-3">Profile</h5>
+              </a>
+              <% if logged_in? %>
+                <h5><a class="hlinks" href="/logout">Log Out</a></h5>
+              <% else %>
+                <h5><a class="hlinks" href="/login">Log In</a></h5>
+              <% end %>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </header>

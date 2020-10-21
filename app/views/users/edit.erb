@@ -1,9 +1,9 @@
-
+<%= erb :"partials/navbar" %>
 
 <h2>Edit Profile</h2>
 
 <form method="POST" action="/users/<%= current_user.id %>">
-<input type="hidden" id="hidden" name="_method" value="PATCH">
+    <input type="hidden" id="hidden" name="_method" value="PATCH">
     <div class="profile-boxes">
         <h3>Name</h3>
         <div>

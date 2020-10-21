@@ -1,9 +1,9 @@
-
+<%= erb :"partials/navbar" %>
 <div class="newpost-box">
     <form method="POST" action="/posts">
         <h4>New Post   <input class="newpost_button" type="submit" value="Share"></h4><br />
         <% current_user.id %>
         <textarea name="body" placeholder="Write a caption..."></textarea><br />
-        <input name="images" type="file">
+        <input name="images" type="file" placeholder="Choose Image">
     </form>
 </div>

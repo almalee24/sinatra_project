@@ -1,4 +1,4 @@
-
+<%= erb :"partials/navbar" %>
 <div>
     <div>
         <h2><%= current_user.username%></h2>
@@ -13,23 +13,36 @@
     </div>
 </div>
 <div>
-    <% Post.all.each do |post|%>
-        <% if post.user_id == current_user.id %>
-            <div class="profile-post">
-                <div>
-                    <h5><%= current_user.username%></h5>
-                     <li class="dropdown">
-           `            <button class="dropbtn">...</button>
-                            <div class="dropdown-content">
-                            <h5><a href="/posts/<%=post.id%>/edit">Edit Post</a></h5>
-                            <h5><a class="hlinks" href="/logout">Log Out</a></h5>
-                     </li>
+    <% if @user.id == current_user.id %>
+        <% current_user.posts.each do |post|%>
+                <div class="profile-post">
+                    <div>
+                        <h5><%= current_user.username%></h5>
+                        <li class="dropdown">
+                        <button class="dropbtn">...</button>
+                                <div class="dropdown-content">
+                                <h5><a href="/posts/<%=post.id%>/edit">Edit Post</a></h5>
+                                <h5>
+                                    <form method="POST" action="/posts/<%= post.id %>">
+                                        <input type="hidden" id="hidden" name="_method" value="DELETE">
+                                        <input type="submit" value="delete">
+                                    </form>
+                                </h5>
+                        </li>
+                    </div>
+                    <div>
+                        <img src="/Users/Alma/Desktop/uploads/"+<%=post.images%> alt="Post Image" width="293" height="293">
+                    </div>
+                    <p><%= post.body %></p>
                 </div>
-                <div>
-                    <img src="/Users/Alma/Desktop/uploads/"+<%=post.images%> alt="Post Image" width="293" height="293">
-                </div>
-                <p><%= post.body %></p>
-            </div>
         <% end %>
+    <% else  %>
+            <div>
+                <h5><%= @user.name%></h5>
+                <% @user.posts.each do |p| %>
+                    <%= p.images %>
+                    <%= p.body %>
+                <% end %>
+            </div>
     <% end %>
 </div>

@@ -1,7 +1,6 @@
 require 'pry'
 class PostController < ApplicationController
     get "/posts" do 
-        binding.pry
         redirect_if_not_logged_in
         @posts = Post.all
         erb :"posts/index"
@@ -30,7 +29,6 @@ class PostController < ApplicationController
 
     get '/posts/:id/edit' do
         redirect_if_not_logged_in
-        @users = User.all
         @post = Post.find_by_id(params[:id])
         if @post.user.id == current_user.id 
             erb :"posts/edit"

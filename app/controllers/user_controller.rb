@@ -28,4 +28,9 @@ class UserController < ApplicationController
         current_user.update(params)
         erb :"users/show"
     end
+
+    post '/allusers' do 
+        @user = User.find_by(name: params[:name])
+        erb :"users/show"
+    end
 end 
